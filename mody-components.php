@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: Kink Advisor
- * Description: Elementor Addons for Kink Advisor application.
+ * Plugin Name: Mody Components
+ * Description: Mody Solutions components.
  * Version:     1.0.0
  * Author:      phycticio
  * Author URI:  https://phycticio.com/
