@@ -22,6 +22,7 @@ function page() : void {
 		'post_status' => 'publish',
 		'posts_per_page' => 1,
 	]);
+	// a commetn
 	if(count($tutorials) > 0) {
 		$content = '<h2 class="title" data-tutorials="' . json_encode($tutorials) . '">' .
 		           __('Please select a video from the menu', 'mody') .
