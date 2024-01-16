@@ -16,7 +16,6 @@ add_action( 'admin_menu', function () {
 } );
 
 function page() : void {
-	$class_name = 'tutorials';
 	$sidebar = '';
 	$tutorials = get_posts([
 		'post_type' => MODY_TUTORIAL_POST_TYPE,
@@ -32,7 +31,7 @@ function page() : void {
 	}
 	$page = \mody\load_template( "admin/{$template}", [
 		'page_title' => __( 'Tutorials', 'mody' ),
-		'class_name' => $class_name,
+		'class_name' => MODY_TUTORIAL_POST_TYPE,
 		'sidebar' => $sidebar,
 		'content' => $content,
 	] );
@@ -59,7 +58,7 @@ add_action('admin_enqueue_scripts', function( $hook ){
 	);
 
 	$video_tutorials = get_posts([
-		'post_type' => 'tutorial',
+		'post_type' => MODY_TUTORIAL_POST_TYPE,
 		'posts_per_page' => -1,
 		'post_status' => 'publish'
 	]);
@@ -72,7 +71,7 @@ add_action('admin_enqueue_scripts', function( $hook ){
 });
 
 add_action( 'init', function() {
-	register_post_type( 'tutorial', array(
+	register_post_type( MODY_TUTORIAL_POST_TYPE, array(
 		'labels' => array(
 			'name' => 'Tutorials',
 			'singular_name' => 'Tutorial',
