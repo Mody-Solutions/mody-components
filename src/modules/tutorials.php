@@ -19,7 +19,7 @@ function page() : void {
 	$sidebar = '';
 	$tutorials = get_posts([
 		'post_type' => MODY_TUTORIAL_POST_TYPE,
-		'status' => 'publish',
+		'post_status' => 'publish',
 		'posts_per_page' => 1,
 	]);
 	if(count($tutorials) > 0) {
