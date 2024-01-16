@@ -23,7 +23,9 @@ function page() : void {
 		'posts_per_page' => 1,
 	]);
 	if(count($tutorials) > 0) {
-		$content = '<h2 class="title">' . __('Please select a video from the menu', 'mody') . '</h2>';
+		$content = '<h2 class="title" data-tutorials="' . json_encode($tutorials) . '">' .
+		           __('Please select a video from the menu', 'mody') .
+		           '</h2>';
 		$template = 'index-sidebar-left';
 	} else {
 		$content = '<h2 class="title">' . __('There are no tutorials available', 'mody') . '</h2>';
