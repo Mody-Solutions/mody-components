@@ -1,0 +1,14 @@
+{
+    "name": "modysolutions/mody",
+    "description": "Mody Plugins",
+    "authors": [
+        {
+            "name": "Mody Solutions",
+            "email": "devs@modysolutions.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "twig/twig": "^3.0"
+    }
+}

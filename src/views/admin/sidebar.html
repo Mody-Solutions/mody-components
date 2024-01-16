@@ -1,0 +1,5 @@
+{% for item in items %}
+<a href="{{ item.href }}" class="sidebar-item {{ class_name }}-sidebar-item {{ item.active }}">
+    {{ item.text }}
+</a>
+{% endfor %}

@@ -1,0 +1,10 @@
+<div class="wrap">
+    <h1 class="wp-heading-inline">{{ page_title }}</h1>
+    <hr class="wp-header-end">
+    <div class="mody two-column left {{ class_name }}">
+        <aside class="sidebar {{ class_name }}_sidebar" id="mody_sidebar"></aside>
+        <main class="content {{ class_name }}_container" id="mody_main_content">
+            {{ content | raw}}
+        </main>
+    </div>
+</div>
