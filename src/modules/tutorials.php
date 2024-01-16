@@ -2,6 +2,8 @@
 
 namespace mody\tutorials;
 
+const MODY_TUTORIAL_POST_TYPE = 'tutorial';
+
 add_action( 'admin_menu', function () {
 	add_menu_page(
 		__( 'Tutorials', 'mody' ),
@@ -16,8 +18,19 @@ add_action( 'admin_menu', function () {
 function page() : void {
 	$class_name = 'tutorials';
 	$sidebar = '';
-	$content = '<h2 class="title">' . __('Please select a video from the menu', 'mody') . '</h2>';
-	$page = \mody\load_template( 'admin/index-sidebar-left', [
+	$tutorials = get_posts([
+		'post_type' => MODY_TUTORIAL_POST_TYPE,
+		'status' => 'publish',
+		'posts_per_page' => 1,
+	]);
+	if(count($tutorials) < 0) {
+		$content = '<h2 class="title">' . __('Please select a video from the menu', 'mody') . '</h2>';
+		$template = 'index-sidebar-left';
+	} else {
+		$content = '<h2 class="title">' . __('There are no tutorials available', 'mody') . '</h2>';
+		$template = 'index-full';
+	}
+	$page = \mody\load_template( "admin/{$template}", [
 		'page_title' => __( 'Tutorials', 'mody' ),
 		'class_name' => $class_name,
 		'sidebar' => $sidebar,

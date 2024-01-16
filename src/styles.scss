@@ -70,4 +70,16 @@
       }
     }
   }
+
+  &.full {
+    .content {
+      width: 100%;
+      box-sizing: border-box;
+
+      .title {
+        font-size: 1.4375rem;
+        padding-left: 1rem;
+      }
+    }
+  }
 }
