@@ -30,6 +30,7 @@ add_action( 'admin_menu', function () {
 			'options-general.php?page=yes-sir',
 			'edit.php?post_type=experience-slide',
 			'edit.php?post_type=elementor_library',
+			'plugin-install.php?s=wp-buy&tab=search&type=author',
 		];
 		foreach ( $blocked_pages as $blocked_page ) {
 			remove_menu_page( $blocked_page );
