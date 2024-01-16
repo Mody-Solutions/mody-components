@@ -23,7 +23,7 @@ function page() : void {
 		'status' => 'publish',
 		'posts_per_page' => 1,
 	]);
-	if(count($tutorials) < 0) {
+	if(count($tutorials) > 0) {
 		$content = '<h2 class="title">' . __('Please select a video from the menu', 'mody') . '</h2>';
 		$template = 'index-sidebar-left';
 	} else {
