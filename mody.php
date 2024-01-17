@@ -11,7 +11,7 @@ use WpOrg\Requests\Exception;
  * Plugin Name: Mody Solutions
  */
 
-define( 'MODY_PLUGIN_VER', '1.0.0' );
+define( 'MODY_PLUGIN_VER', '1.0.1' );
 define( 'MODY_PLUGIN_DIR_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
 define( 'MODY_PLUGIN_DIR_PATH', trailingslashit( plugin_dir_path( __FILE__ ) ) );
 define( 'MODY_PLUGIN_DIST_DIR', trailingslashit( MODY_PLUGIN_DIR_URL . 'dist' ) );
