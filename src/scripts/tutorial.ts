@@ -40,7 +40,7 @@ if (triggers) {
           const video = document.createElement('video');
           video.src = tutorial?.video_url;
           video.controls = true;
-          // video.autoplay = true;
+          video.autoplay = true;
           video.width = 640;
           video.height = 480;
 
