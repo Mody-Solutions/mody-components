@@ -23,7 +23,7 @@ function page() : void {
 		'posts_per_page' => 1,
 	]);
 	if(count($tutorials) > 0) {
-		$content = '<h2 class="title" data-tutorials="' . json_encode($tutorials) . '">' .
+		$content = '<h2 class="title">' .
 		           __('Please select a video from the menu', 'mody') .
 		           '</h2>';
 		$template = 'index-sidebar-left';
@@ -64,7 +64,7 @@ add_action('admin_enqueue_scripts', function( $hook ){
 		'posts_per_page' => -1,
 		'post_status' => 'publish',
 		'orderby' => 'menu_order',
-		'sort_order' => 'desc',
+		'order' => 'asc',
 	]);
 	$video_tutorials = array_map(function($tutorial){
 		$tutorial->video_url = get_field('video', $tutorial);
