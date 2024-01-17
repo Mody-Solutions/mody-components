@@ -30,7 +30,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          "server-dir": ./wp-content/plugins/mody/
+          "server-dir": ./oyessir.com/wp-content/plugins/mody/
           exclude: |
             **/.git*
             **/.git*/**
