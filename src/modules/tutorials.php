@@ -22,7 +22,6 @@ function page() : void {
 		'post_status' => 'publish',
 		'posts_per_page' => 1,
 	]);
-	// a commetn
 	if(count($tutorials) > 0) {
 		$content = '<h2 class="title" data-tutorials="' . json_encode($tutorials) . '">' .
 		           __('Please select a video from the menu', 'mody') .
@@ -114,9 +113,10 @@ add_action( 'init', function() {
 		'rest_namespace' => 'mody/v2',
 		'menu_icon' => 'dashicons-format-video',
 		'supports' => array(
-			0 => 'title',
-			1 => 'editor',
-			2 => 'thumbnail',
+			'title',
+			'editor',
+			'thumbnail',
+			'page-attributes',
 		),
 		'rewrite' => array(
 			'with_front' => false,
