@@ -62,7 +62,8 @@ add_action('admin_enqueue_scripts', function( $hook ){
 	$video_tutorials = get_posts([
 		'post_type' => MODY_TUTORIAL_POST_TYPE,
 		'posts_per_page' => -1,
-		'post_status' => 'publish'
+		'post_status' => 'publish',
+		'orderby' => 'menu_order',
 	]);
 	$video_tutorials = array_map(function($tutorial){
 		$tutorial->video_url = get_field('video', $tutorial);
