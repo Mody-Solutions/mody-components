@@ -53,9 +53,9 @@ if (triggers) {
           section.appendChild(separator);
           section.appendChild(content);
 
-          main?.appendChild(title);
-          main?.appendChild(separator);
-          main?.appendChild(section);
+          main.appendChild(title);
+          main.appendChild(separator);
+          main.appendChild(section);
         }
       }
     })
