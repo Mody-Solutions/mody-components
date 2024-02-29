@@ -22,7 +22,6 @@ add_action( 'admin_menu', function () {
 	}, ARRAY_FILTER_USE_BOTH );
 	if ( ! $allowed ) {
 		$blocked_pages = [
-			'edit.php',
 			'tools.php',
 			'edit-comments.php',
 			'admin.php?page=wpml-media',
